@@ -1,0 +1,4 @@
+var new_comment = $("<%= escape_javascript(render(:partial => @comment))%>").hide();
+$('#comments').prepend(new_comment);
+$('#comment <%= @comment.id %>').slideDown('slow');
+$('#new_comment')[0].reset();
